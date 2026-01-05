@@ -1,0 +1,62 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "C语言程序设计",
+      "category": "required",
+      "hasLab": true,
+      "credit": 4,
+      "semester": "大一上",
+      "description": "编程入门课程，学习C语言基础语法、指针、结构体等核心概念。",
+      "topics": [
+        "变量、数据类型和运算符",
+        "控制流程（if/else, switch, 循环）",
+        "数组和字符串",
+        "指针和内存管理",
+        "结构体和文件操作"
+      ],
+      "resources": [
+        {
+          "type": "book",
+          "title": "C Primer Plus",
+          "author": "Stephen Prata",
+          "description": "经典入门教材，适合初学者"
+        },
+        {
+          "type": "book",
+          "title": "C程序设计语言（K&R）",
+          "author": "Brian W. Kernighan, Dennis M. Ritchie",
+          "description": "深入理解C语言"
+        }
+      ],
+      "codeExamples": [
+        {
+          "title": "基础语法示例",
+          "language": "c",
+          "code": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}"
+        },
+        {
+          "title": "指针示例",
+          "language": "c",
+          "code": "void swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}"
+        }
+      ],
+      "tips": [
+        "重点理解指针概念，这是C语言的核心",
+        "多动手写代码，不要只看书",
+        "注意内存管理，避免内存泄漏",
+        "学会使用调试工具（gdb等）"
+      ],
+      "examTips": "考试重点：指针、数组、函数、结构体。平时多刷题，理解比死记更重要。"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-01-01",
+    "version": "1.0",
+    "totalCourses": 0,
+    "categories": {
+      "required": "必修课",
+      "elective": "选修课"
+    }
+  }
+}
