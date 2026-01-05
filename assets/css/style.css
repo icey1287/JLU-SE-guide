@@ -305,6 +305,9 @@ img {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .timeline-content:hover {
@@ -416,6 +419,29 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: var(--spacing-lg);
+}
+
+/* 课程卡片链接包装器 */
+.course-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.course-card-link:hover {
+    transform: translateY(-5px);
+}
+
+/* 点击提示 */
+.course-click-hint,
+.click-hint {
+    text-align: center;
+    padding: var(--spacing-sm);
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 .course-card {

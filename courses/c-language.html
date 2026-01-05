@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C语言程序设计 - 软件工程专业通关指南</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body class="detail-page">
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <h1>软件工程通关指南</h1>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#home" class="nav-link">首页</a></li>
+                <li><a href="../index.html#timeline" class="nav-link">时间线</a></li>
+                <li><a href="../index.html#courses" class="nav-link">课程攻略</a></li>
+                <li><a href="../index.html#advice" class="nav-link">学习建议</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">首页</a>
+                <span class="separator">/</span>
+                <a href="../index.html#courses">课程攻略</a>
+                <span class="separator">/</span>
+                <span class="current">C语言程序设计</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 页面主体 -->
+    <div class="detail-container">
+        <!-- 主内容区 -->
+        <main class="detail-main">
+            <!-- 课程头部 -->
+            <header class="course-header-detail">
+                <div class="course-tags">
+                    <span class="course-tag required">必修课</span>
+                    <span class="course-tag lab">有实验</span>
+                </div>
+                <h1 class="course-title">C语言程序设计</h1>
+
+                <!-- 课程元信息 -->
+                <div class="course-meta-bar">
+                    <div class="meta-item">
+                        <span class="meta-icon">📚</span>
+                        <span class="meta-label">学分</span>
+                        <span class="meta-value">4</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📅</span>
+                        <span class="meta-label">学期</span>
+                        <span class="meta-value">大一上</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">⏱️</span>
+                        <span class="meta-label">阅读时间</span>
+                        <span class="meta-value" id="readTime">计算中...</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📝</span>
+                        <span class="meta-label">字数</span>
+                        <span class="meta-value" id="wordCount">计算中...</span>
+                    </div>
+                </div>
+
+                <!-- 难度评级 -->
+                <div class="difficulty-rating">
+                    <span class="difficulty-label">课程难度：</span>
+                    <div class="difficulty-stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <span class="difficulty-text">中等难度</span>
+                </div>
+
+                <!-- 快速导航 -->
+                <div class="quick-nav">
+                    <a href="#overview" class="quick-nav-item">课程概述</a>
+                    <a href="#topics" class="quick-nav-item">重点内容</a>
+                    <a href="#examples" class="quick-nav-item">代码示例</a>
+                    <a href="#resources" class="quick-nav-item">学习资源</a>
+                    <a href="#tips" class="quick-nav-item">学习技巧</a>
+                    <a href="#exam" class="quick-nav-item">考试攻略</a>
+                </div>
+            </header>
+
+            <!-- 课程概述 -->
+            <section id="overview" class="content-section">
+                <h2>课程概述</h2>
+                <div class="content-box">
+                    <p>C语言程序设计是软件工程专业的入门必修课，也是计算机科学的基石。这门课程将带你从零开始学习编程，掌握C语言的核心语法和编程思想。</p>
+
+                    <p>作为一门古老而强大的语言，C语言至今仍然被广泛应用于系统编程、嵌入式开发、高性能计算等领域。学习C语言不仅能够掌握一门实用的编程工具，更重要的是培养严谨的编程思维和良好的编程习惯。</p>
+
+                    <div class="highlight-box">
+                        <h3>🎯 学习目标</h3>
+                        <ul>
+                            <li>掌握C语言基本语法和编程规范</li>
+                            <li>理解指针概念，能够进行内存管理</li>
+                            <li>掌握结构体和文件操作</li>
+                            <li>培养调试能力和程序设计思维</li>
+                            <li>为后续学习数据结构、操作系统等课程打下基础</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>💡 为什么学C语言？</h4>
+                        <p>C语言是很多现代编程语言的基础。学会了C语言，你就能轻松理解Java、C++、Go等语言的底层原理。此外，C语言能让你真正理解计算机是如何工作的——内存管理、指针操作、编译链接等概念，都是通过C语言才能深入理解的。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 重点内容 -->
+            <section id="topics" class="content-section">
+                <h2>重点内容</h2>
+
+                <div class="topic-grid">
+                    <div class="topic-card">
+                        <h3>1. 基础语法</h3>
+                        <div class="topic-content">
+                            <ul>
+                                <li>数据类型：int, float, double, char等</li>
+                                <li>变量和常量</li>
+                                <li>运算符和表达式</li>
+                                <li>输入输出函数：printf, scanf</li>
+                            </ul>
+                            <div class="importance high">⭐⭐⭐⭐⭐ 基础中的基础</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>2. 控制流程</h3>
+                        <div class="topic-content">
+                            <ul>
+                                <li>条件语句：if-else, switch-case</li>
+                                <li>循环语句：for, while, do-while</li>
+                                <li>break和continue</li>
+                                <li>嵌套控制结构</li>
+                            </ul>
+                            <div class="importance high">⭐⭐⭐⭐⭐ 必考内容</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>3. 数组与字符串</h3>
+                        <div class="topic-content">
+                            <ul>
+                                <li>一维数组和多维数组</li>
+                                <li>字符数组与字符串</li>
+                                <li>常用字符串函数：strlen, strcpy, strcmp等</li>
+                                <li>数组作为函数参数</li>
+                            </ul>
+                            <div class="importance high">⭐⭐⭐⭐⭐ 重点</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>4. 指针（核心难点）</h3>
+                        <div class="topic-content">
+                            <ul>
+                                <li>指针的概念和声明</li>
+                                <li>指针与数组</li>
+                                <li>指针作为函数参数</li>
+                                <li>函数指针</li>
+                                <li>动态内存分配：malloc, free</li>
+                            </ul>
+                            <div class="importance critical">⭐⭐⭐⭐⭐ 重点+难点</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>5. 函数</h3>
+                        <div class="topic-content">
+                            <ul>
+                                <li>函数定义和声明</li>
+                                <li>参数传递机制</li>
+                                <li>递归函数</li>
+                                <li>变量的作用域和存储类别</li>
+                            </ul>
+                            <div class="importance high">⭐⭐⭐⭐ 重要</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>6. 结构体与文件</h3>
+                        <div class="topic-content">
+                            <ul>
+                                <li>结构体定义和使用</li>
+                                <li>结构体数组</li>
+                                <li>文件操作：fopen, fclose, fread, fwrite</li>
+                                <li>文本文件和二进制文件</li>
+                            </ul>
+                            <div class="importance medium">⭐⭐⭐ 实用</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 代码示例 -->
+            <section id="examples" class="content-section">
+                <h2>代码示例</h2>
+
+                <div class="code-examples-container">
+                    <div class="code-example-item">
+                        <h3>示例1：基础语法 - 学生成绩管理系统</h3>
+                        <p class="example-description">这是一个综合运用基础语法的例子，包含输入输出、条件判断、循环等知识点。</p>
+                        <button class="toggle-code">展开代码</button>
+                        <div class="code-container hidden">
+                            <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+#define MAX_STUDENTS 50
+
+int main() {
+    int scores[MAX_STUDENTS];
+    int n, i, sum = 0;
+    float average;
+
+    // 输入学生人数
+    printf("请输入学生人数（最多%d人）: ", MAX_STUDENTS);
+    scanf("%d", &n);
+
+    if (n <= 0 || n > MAX_STUDENTS) {
+        printf("输入的人数无效！\n");
+        return 1;
+    }
+
+    // 输入每个学生的成绩
+    for (i = 0; i < n; i++) {
+        printf("请输入第%d个学生的成绩: ", i + 1);
+        scanf("%d", &scores[i]);
+
+        // 验证成绩范围
+        if (scores[i] < 0 || scores[i] > 100) {
+            printf("成绩无效，请重新输入！\n");
+            i--;
+            continue;
+        }
+
+        sum += scores[i];
+    }
+
+    // 计算平均分
+    average = (float)sum / n;
+
+    // 输出结果
+    printf("\n===== 统计结果 =====\n");
+    printf("总分: %d\n", sum);
+    printf("平均分: %.2f\n", average);
+
+    // 统计各等级人数
+    int excellent = 0, good = 0, pass = 0, fail = 0;
+    for (i = 0; i < n; i++) {
+        if (scores[i] >= 90) excellent++;
+        else if (scores[i] >= 80) good++;
+        else if (scores[i] >= 60) pass++;
+        else fail++;
+    }
+
+    printf("优秀(90-100): %d人\n", excellent);
+    printf("良好(80-89): %d人\n", good);
+    printf("及格(60-79): %d人\n", pass);
+    printf("不及格(<60): %d人\n", fail);
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="code-example-item">
+                        <h3>示例2：指针 - 数组反转（两种方法）</h3>
+                        <p class="example-description">对比数组下标访问和指针访问的区别，深入理解指针。</p>
+                        <button class="toggle-code">展开代码</button>
+                        <div class="code-container hidden">
+                            <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+// 方法1：使用数组下标
+void reverseArray1(int arr[], int size) {
+    int temp;
+    for (int i = 0; i < size / 2; i++) {
+        temp = arr[i];
+        arr[i] = arr[size - 1 - i];
+        arr[size - 1 - i] = temp;
+    }
+}
+
+// 方法2：使用指针
+void reverseArray2(int *arr, int size) {
+    int *start = arr;
+    int *end = arr + size - 1;
+    int temp;
+
+    while (start < end) {
+        temp = *start;
+        *start = *end;
+        *end = temp;
+        start++;
+        end--;
+    }
+}
+
+// 打印数组
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arr1[] = {1, 2, 3, 4, 5};
+    int arr2[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr1) / sizeof(arr1[0]);
+
+    printf("原数组: ");
+    printArray(arr1, size);
+
+    // 使用方法1
+    reverseArray1(arr1, size);
+    printf("方法1反转后: ");
+    printArray(arr1, size);
+
+    // 使用方法2
+    reverseArray2(arr2, size);
+    printf("方法2反转后: ");
+    printArray(arr2, size);
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="code-example-item">
+                        <h3>示例3：结构体 - 学生信息管理</h3>
+                        <p class="example-description">综合运用结构体、数组、指针等知识。</p>
+                        <button class="toggle-code">展开代码</button>
+                        <div class="code-container hidden">
+                            <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#define MAX_STUDENTS 100
+
+// 定义学生结构体
+struct Student {
+    int id;
+    char name[50];
+    int age;
+    float score;
+};
+
+// 函数声明
+void inputStudent(struct Student *s);
+void printStudent(struct Student s);
+void sortByScore(struct Student students[], int n);
+
+int main() {
+    struct Student students[MAX_STUDENTS];
+    int n, i;
+
+    printf("请输入学生人数: ");
+    scanf("%d", &n);
+
+    // 输入学生信息
+    for (i = 0; i < n; i++) {
+        printf("\n===== 第%d个学生 =====\n", i + 1);
+        inputStudent(&students[i]);
+    }
+
+    // 按成绩排序
+    sortByScore(students, n);
+
+    // 输出排序后的结果
+    printf("\n===== 按成绩排序 =====\n");
+    for (i = 0; i < n; i++) {
+        printStudent(students[i]);
+    }
+
+    return 0;
+}
+
+// 输入学生信息
+void inputStudent(struct Student *s) {
+    printf("学号: ");
+    scanf("%d", &s->id);
+
+    printf("姓名: ");
+    scanf("%s", s->name);
+
+    printf("年龄: ");
+    scanf("%d", &s->age);
+
+    printf("成绩: ");
+    scanf("%f", &s->score);
+}
+
+// 打印学生信息
+void printStudent(struct Student s) {
+    printf("学号: %d, 姓名: %s, 年龄: %d, 成绩: %.2f\n",
+           s.id, s.name, s.age, s.score);
+}
+
+// 按成绩排序（冒泡排序）
+void sortByScore(struct Student students[], int n) {
+    int i, j;
+    struct Student temp;
+
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - 1 - i; j++) {
+            if (students[j].score < students[j + 1].score) {
+                temp = students[j];
+                students[j] = students[j + 1];
+                students[j + 1] = temp;
+            }
+        }
+    }
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="code-example-item">
+                        <h3>示例4：文件操作 - 成绩保存与读取</h3>
+                        <p class="example-description">演示如何将数据保存到文件并读取。</p>
+                        <button class="toggle-code">展开代码</button>
+                        <div class="code-container hidden">
+                            <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct Student {
+    char name[50];
+    int score;
+};
+
+// 保存数据到文件
+void saveToFile(struct Student students[], int n, char *filename) {
+    FILE *fp = fopen(filename, "wb");  // 二进制写模式
+
+    if (fp == NULL) {
+        printf("无法打开文件！\n");
+        return;
+    }
+
+    fwrite(students, sizeof(struct Student), n, fp);
+    fclose(fp);
+    printf("数据已保存到 %s\n", filename);
+}
+
+// 从文件读取数据
+int loadFromFile(struct Student students[], char *filename) {
+    FILE *fp = fopen(filename, "rb");  // 二进制读模式
+
+    if (fp == NULL) {
+        printf("文件不存在或无法打开！\n");
+        return 0;
+    }
+
+    int n = fread(students, sizeof(struct Student), 100, fp);
+    fclose(fp);
+    printf("从 %s 读取了 %d 条记录\n", filename, n);
+
+    return n;
+}
+
+int main() {
+    struct Student students[100];
+    int n, i;
+    char filename[] = "scores.dat";
+
+    // 输入数据
+    printf("请输入学生人数: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("第%d个学生 - 姓名: ", i + 1);
+        scanf("%s", students[i].name);
+        printf("成绩: ");
+        scanf("%d", &students[i].score);
+    }
+
+    // 保存到文件
+    saveToFile(students, n, filename);
+
+    // 从文件读取
+    struct Student loaded[100];
+    int count = loadFromFile(loaded, filename);
+
+    // 显示读取的数据
+    printf("\n从文件读取的数据：\n");
+    for (i = 0; i < count; i++) {
+        printf("%s: %d\n", loaded[i].name, loaded[i].score);
+    }
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学习资源 -->
+            <section id="resources" class="content-section">
+                <h2>学习资源</h2>
+
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-type">📕 教材</div>
+                        <h3>C Primer Plus（第6版）中文版</h3>
+                        <p class="resource-author">作者：Stephen Prata</p>
+                        <p class="resource-desc">最适合初学者的C语言教材，内容详细，讲解清晰，包含大量实例和练习题。</p>
+                        <div class="resource-meta">
+                            <span class="tag">推荐指数：⭐⭐⭐⭐⭐</span>
+                            <span class="tag">适合：零基础入门</span>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-type">📘 经典</div>
+                        <h3>C程序设计语言（K&R）</h3>
+                        <p class="resource-author">作者：Brian W. Kernighan, Dennis M. Ritchie</p>
+                        <p class="resource-desc">C语言创始人编写的经典教材，简洁精炼，适合有一定基础后深入学习。</p>
+                        <div class="resource-meta">
+                            <span class="tag">推荐指数：⭐⭐⭐⭐⭐</span>
+                            <span class="tag">适合：进阶学习</span>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-type">🎓 在线课程</div>
+                        <h3>中国大学MOOC - C语言程序设计</h3>
+                        <p class="resource-desc">浙大翁恺老师的C语言课程，讲解生动，适合初学者。</p>
+                        <div class="resource-meta">
+                            <span class="tag">免费</span>
+                            <span class="tag">有证书</span>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-type">💻 练习平台</div>
+                        <h3>洛谷 / LeetCode</h3>
+                        <p class="resource-desc">在线编程练习平台，从简单到困难，循序渐进提升编程能力。</p>
+                        <div class="resource-meta">
+                            <span class="tag">免费</span>
+                            <span class="tag">社区活跃</span>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-type">🔧 开发工具</div>
+                        <h3>Visual Studio Code</h3>
+                        <p class="resource-desc">轻量级代码编辑器，配合C/C++扩展使用，适合学习和开发。</p>
+                        <div class="resource-meta">
+                            <span class="tag">免费</span>
+                            <span class="tag">跨平台</span>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-type">📝 笔记</div>
+                        <h3>C语言笔记整理</h3>
+                        <p class="resource-desc">个人学习笔记和常见问题汇总，持续更新中。</p>
+                        <div class="resource-meta">
+                            <span class="tag">原创</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学习技巧 -->
+            <section id="tips" class="content-section">
+                <h2>学习技巧</h2>
+
+                <div class="tips-container">
+                    <div class="tip-item">
+                        <div class="tip-number">01</div>
+                        <div class="tip-content">
+                            <h3>多动手写代码</h3>
+                            <p>看懂≠会写。每学一个知识点，都要自己动手写代码实践。不要怕出错，错误是最好的老师。</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-number">02</div>
+                        <div class="tip-content">
+                            <h3>理解内存模型</h3>
+                            <p>画图理解变量在内存中的存储，特别是指针部分。想象内存是一个大仓库，每个变量都有自己的地址。</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-number">03</div>
+                        <div class="tip-content">
+                            <h3>学会调试</h3>
+                            <p>不要只用printf调试。学会使用调试器（gdb、VSCode调试功能），单步执行、查看变量值、设置断点。</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-number">04</div>
+                        <div class="tip-content">
+                            <h3>注意代码规范</h3>
+                            <p>养成良好的编码习惯：变量命名有意义、适当注释、缩进统一。这些细节决定了你的代码质量。</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-number">05</div>
+                        <div class="tip-content">
+                            <h3>常见错误总结</h3>
+                            <p>建立自己的错题本，记录常见错误：忘记分号、数组越界、指针未初始化、内存泄漏等。</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-number">06</div>
+                        <div class="tip-content">
+                            <h3>循序渐进</h3>
+                            <p>不要一开始就追求复杂的程序。从简单的开始，逐步增加难度。每掌握一个知识点就做一个综合练习。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 考试攻略 -->
+            <section id="exam" class="content-section">
+                <h2>考试攻略</h2>
+
+                <div class="exam-guide">
+                    <div class="exam-section">
+                        <h3>📝 考试重点</h3>
+                        <ul>
+                            <li><strong>指针（必考大题）</strong>：指针的概念、指针与数组、指针作为函数参数</li>
+                            <li><strong>数组</strong>：一维数组、二维数组、字符数组</li>
+                            <li><strong>函数</strong>：函数定义、参数传递、递归</li>
+                            <li><strong>结构体</strong>：结构体定义、结构体数组、结构体指针</li>
+                            <li><strong>循环和条件</strong>：嵌套循环、break/continue的使用</li>
+                        </ul>
+                    </div>
+
+                    <div class="exam-section">
+                        <h3>💡 答题技巧</h3>
+                        <ul>
+                            <li>程序阅读题：从主函数开始，逐行跟踪变量值的变化，可以使用表格记录</li>
+                            <li>程序填空题：先理解程序整体功能，再根据上下文填写</li>
+                            <li>编程题：先写注释和框架，再实现具体功能，注意边界条件</li>
+                            <li>时间分配：选择题20分钟，填空题30分钟，编程题留足时间</li>
+                        </ul>
+                    </div>
+
+                    <div class="exam-section">
+                        <h3>🎯 备考建议</h3>
+                        <ul>
+                            <li>考前1-2周：系统复习所有知识点，不要遗漏</li>
+                            <li>刷历年真题：熟悉考试题型和难度</li>
+                            <li>重点突破：针对薄弱环节集中练习</li>
+                            <li>整理错题：复习常见错误和易混淆知识点</li>
+                            <li>考前模拟：限时完成一套真题，检验复习效果</li>
+                        </ul>
+                    </div>
+
+                    <div class="exam-section">
+                        <h3>⚠️ 常见失分点</h3>
+                        <ul>
+                            <li>忘记包含头文件（stdio.h, string.h等）</li>
+                            <li>数组越界访问</li>
+                            <li>指针使用前未初始化</li>
+                            <li>字符串操作忘记'\0'结束符</li>
+                            <li>main函数忘记return语句</li>
+                            <li>动态内存分配后忘记释放</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 常见问题 -->
+            <section id="faq" class="content-section">
+                <h2>常见问题</h2>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q: 指针真的很难吗？</h3>
+                        <div class="faq-answer">
+                            <p>指针确实是C语言的难点，但不是不可逾越。关键是要多画图，理解内存地址的概念。建议从简单的指针变量开始，逐步学习指针与数组、指针与函数的关系。多练习、多思考，慢慢就会理解。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q: 什么时候使用指针？</h3>
+                        <div class="faq-answer">
+                            <p>指针主要用于：1) 需要函数内部修改外部变量时；2) 处理数组时；3) 动态内存分配时；4) 优化性能时。初学者可以从第1点开始理解，这是指针最常见的用途。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q: 数组和指针有什么区别？</h3>
+                        <div class="faq-answer">
+                            <p>数组是固定大小的内存块，用于存储相同类型的多个数据；指针是存储地址的变量。数组名在很多情况下会退化为指针，但它们有本质区别：数组的大小是固定的，指针可以指向不同的地址。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q: 如何避免内存泄漏？</h3>
+                        <div class="faq-answer">
+                            <p>记住：每次malloc都要有对应的free。建议：1) malloc后立即写好free；2) 使用注释标记malloc/free配对；3) 使用工具检测内存泄漏（如Valgrind）；4) 考虑使用栈分配而非堆分配。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q: 学完C语言应该学什么？</h3>
+                        <div class="faq-answer">
+                            <p>建议顺序：1) 数据结构与算法（C语言实现的）；2) 进一步学习C++或Java；3) 操作系统原理（用C语言实现系统调用）；4) 计算机网络（Socket编程）。C语言是基础，后续课程都会用到。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 页面底部导航 -->
+            <div class="page-navigation">
+                <a href="#" class="nav-button prev">
+                    <span class="nav-label">上一课</span>
+                    <span class="nav-title">（无）</span>
+                </a>
+                <a href="data-structure.html" class="nav-button next">
+                    <span class="nav-label">下一课</span>
+                    <span class="nav-title">数据结构与算法 →</span>
+                </a>
+            </div>
+        </main>
+
+        <!-- 侧边栏 -->
+        <aside class="detail-sidebar">
+            <!-- 目录导航 -->
+            <div class="sidebar-widget">
+                <h3>本文目录</h3>
+                <ul class="toc-list" id="tocList">
+                    <li><a href="#overview">课程概述</a></li>
+                    <li><a href="#topics">重点内容</a></li>
+                    <li><a href="#examples">代码示例</a></li>
+                    <li><a href="#resources">学习资源</a></li>
+                    <li><a href="#tips">学习技巧</a></li>
+                    <li><a href="#exam">考试攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+
+            <!-- 相关课程 -->
+            <div class="sidebar-widget">
+                <h3>相关课程</h3>
+                <ul class="related-courses">
+                    <li>
+                        <a href="data-structure.html">
+                            <span class="course-icon">📊</span>
+                            <div class="course-info">
+                                <div class="course-name-small">数据结构与算法</div>
+                                <div class="course-relation">后续课程</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="database.html">
+                            <span class="course-icon">🗄️</span>
+                            <div class="course-info">
+                                <div class="course-name-small">数据库原理</div>
+                                <div class="course-relation">大二课程</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="operating-system.html">
+                            <span class="course-icon">⚙️</span>
+                            <div class="course-info">
+                                <div class="course-name-small">操作系统</div>
+                                <div class="course-relation">大三课程</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 快速链接 -->
+            <div class="sidebar-widget">
+                <h3>快速链接</h3>
+                <ul class="quick-links">
+                    <li><a href="../index.html#timeline">📅 查看时间线</a></li>
+                    <li><a href="../index.html#pitfalls">⚠️ 避坑指南</a></li>
+                    <li><a href="../index.html#advice">💡 学习建议</a></li>
+                </ul>
+            </div>
+
+            <!-- 返回按钮 -->
+            <div class="sidebar-widget">
+                <a href="../index.html#courses" class="back-button">← 返回课程列表</a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 软件工程通关指南. 用❤️制作</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/detail.js"></script>
+</body>
+</html>

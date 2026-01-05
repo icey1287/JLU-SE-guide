@@ -59,7 +59,7 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-content">
+                    <a href="timeline/freshman-first.html" class="timeline-content">
                         <h3>大一上学期</h3>
                         <ul class="timeline-tasks">
                             <li>适应大学生活</li>
@@ -67,7 +67,8 @@
                             <li>掌握基本算法和数据结构</li>
                             <li>参加编程社团</li>
                         </ul>
-                    </div>
+                        <div class="click-hint">点击查看详细攻略 →</div>
+                    </a>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
@@ -210,74 +211,39 @@
             <!-- 课程列表 -->
             <div class="course-grid" id="courseGrid">
                 <!-- 课程卡片模板，后续通过JavaScript动态加载 -->
-                <div class="course-card" data-category="required lab">
-                    <div class="course-header">
-                        <h3 class="course-name">C语言程序设计</h3>
-                        <span class="course-tag required">必修</span>
-                    </div>
-                    <div class="course-meta">
-                        <span class="course-credit">学分: 4</span>
-                        <span class="course-semester">大一上</span>
-                    </div>
-                    <div class="course-description">
-                        <p>编程入门课程，学习C语言基础语法、指针、结构体等核心概念。</p>
-                    </div>
-                    <div class="course-topics">
-                        <h4>重点内容</h4>
-                        <ul>
-                            <li>变量、数据类型和运算符</li>
-                            <li>控制流程（if/else, switch, 循环）</li>
-                            <li>数组和字符串</li>
-                            <li>指针和内存管理</li>
-                            <li>结构体和文件操作</li>
-                        </ul>
-                    </div>
-                    <div class="course-resources">
-                        <h4>学习资源</h4>
-                        <ul>
-                            <li>《C Primer Plus》- 经典入门教材</li>
-                            <li>《C程序设计语言》（K&R）- 深入理解</li>
-                        </ul>
-                    </div>
-                    <div class="course-examples">
-                        <h4>代码示例</h4>
-                        <button class="toggle-code">展开代码</button>
-                        <div class="code-container hidden">
-                            <pre><code class="language-c">#include &lt;stdio.h&gt;
-
-// 结构体示例
-struct Student {
-    char name[50];
-    int id;
-    float score;
-};
-
-// 指针示例
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-int main() {
-    // 基本输入输出
-    printf("Hello, World!\n");
-
-    // 指针使用
-    int x = 5, y = 10;
-    swap(&x, &y);
-    printf("x=%d, y=%d\n", x, y);
-
-    // 结构体使用
-    struct Student s = {"张三", 1001, 95.5};
-    printf("学生: %s, 学号: %d, 成绩: %.1f\n",
-           s.name, s.id, s.score);
-
-    return 0;
-}</code></pre>
+                <a href="courses/c-language.html" class="course-card-link">
+                    <div class="course-card" data-category="required lab">
+                        <div class="course-header">
+                            <h3 class="course-name">C语言程序设计</h3>
+                            <span class="course-tag required">必修</span>
                         </div>
+                        <div class="course-meta">
+                            <span class="course-credit">学分: 4</span>
+                            <span class="course-semester">大一上</span>
+                        </div>
+                        <div class="course-description">
+                            <p>编程入门课程，学习C语言基础语法、指针、结构体等核心概念。</p>
+                        </div>
+                        <div class="course-topics">
+                            <h4>重点内容</h4>
+                            <ul>
+                                <li>变量、数据类型和运算符</li>
+                                <li>控制流程（if/else, switch, 循环）</li>
+                                <li>数组和字符串</li>
+                                <li>指针和内存管理</li>
+                                <li>结构体和文件操作</li>
+                            </ul>
+                        </div>
+                        <div class="course-resources">
+                            <h4>学习资源</h4>
+                            <ul>
+                                <li>《C Primer Plus》- 经典入门教材</li>
+                                <li>《C程序设计语言》（K&R）- 深入理解</li>
+                            </ul>
+                        </div>
+                        <div class="course-click-hint">点击查看详细攻略 →</div>
                     </div>
-                </div>
+                </a>
 
                 <div class="course-card" data-category="required lab">
                     <div class="course-header">
