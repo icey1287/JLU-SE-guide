@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCodeToggle();
     initSmoothScroll();
     initScrollSpy();
+    initPathSelector(); // 添加路径选择器初始化
 });
 
 // ==================== 导航栏功能 ====================
@@ -443,4 +444,78 @@ function initTooltips() {
             }
         });
     });
+}
+
+// ==================== 路径选择器功能 ====================
+function initPathSelector() {
+    const pathButtons = document.querySelectorAll('.path-btn');
+    const pathContents = {
+        research: document.querySelectorAll('.research-path'),
+        employment: document.querySelectorAll('.employment-path')
+    };
+
+    // 从localStorage读取用户的选择
+    const savedPath = localStorage.getItem('selectedPath');
+    if (savedPath && (savedPath === 'research' || savedPath === 'employment')) {
+        switchPath(savedPath);
+    }
+
+    // 为每个按钮添加点击事件
+    pathButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const selectedPath = this.getAttribute('data-path');
+            switchPath(selectedPath);
+
+            // 保存用户的选择
+            localStorage.setItem('selectedPath', selectedPath);
+        });
+    });
+
+    /**
+     * 切换路径
+     * @param {string} path - 'research' 或 'employment'
+     */
+    function switchPath(path) {
+        // 更新按钮状态
+        pathButtons.forEach(btn => {
+            if (btn.getAttribute('data-path') === path) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // 更新时间线内容显示
+        if (path === 'research') {
+            // 显示科研路径，隐藏就业路径
+            pathContents.research.forEach(content => {
+                content.style.display = 'block';
+                content.style.animation = 'fadeIn 0.5s ease';
+            });
+            pathContents.employment.forEach(content => {
+                content.style.display = 'none';
+            });
+        } else if (path === 'employment') {
+            // 显示就业路径，隐藏科研路径
+            pathContents.employment.forEach(content => {
+                content.style.display = 'block';
+                content.style.animation = 'fadeIn 0.5s ease';
+            });
+            pathContents.research.forEach(content => {
+                content.style.display = 'none';
+            });
+        }
+
+        // 平滑滚动到时间线顶部
+        const timeline = document.getElementById('universityTimeline');
+        if (timeline) {
+            const navbarHeight = document.getElementById('navbar').offsetHeight;
+            const targetPosition = timeline.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 20;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
 }
