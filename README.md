@@ -1,259 +1,285 @@
-# 软件工程专业通关指南
+# 贡献指南
 
-一个帮助软件工程专业学生更好地规划大学生活的静态网站，包含完整的时间线、学习建议、课程攻略和避坑指南。
+感谢你考虑为软件工程专业通关指南做贡献！这是一个开源项目，欢迎所有人提交课程攻略和改进建议。
 
-## 功能特性
+## 🎯 贡献方式
 
-- 📅 **大学时间线** - 从大一到大四的完整规划建议
-- 💡 **学习建议** - 专业前辈总结的学习经验
-- 📚 **课程攻略** - 所有必修课和选修课的详细攻略
-- 💻 **代码示例** - 有实验的课程附上完整代码
-- ⚠️ **避坑指南** - 常见误区和注意事项
-- 🔍 **课程筛选** - 按必修/选修/是否有实验筛选
-- 📱 **响应式设计** - 完美适配手机、平板、电脑
+### 方式一：提交课程MD文档（推荐）
 
-## 本地运行
+这是最简单的贡献方式，适合所有人：
 
-1. 克隆项目到本地
-```bash
-git clone https://github.com/your-username/software-engineering-guide.git
-cd software-engineering-guide
+1. **Fork 本仓库**
+2. **创建MD文档**：在 `courses/md/` 目录下创建新的MD文件
+3. **提交PR**：向我们提交Pull Request
+
+### 方式二：完善现有内容
+
+- 修正错误
+- 补充遗漏的知识点
+- 添加更多代码示例
+- 改进排版和格式
+
+### 方式三：提交Issue
+
+- 报告bug
+- 建议新功能
+- 提出改进意见
+
+## 📝 MD文档规范
+
+### 文件命名
+
+格式：`{course-name}.md`
+
+示例：
+- `c-language.md` - C语言程序设计
+- `data-structure.md` - 数据结构与算法
+- `database.md` - 数据库原理
+
+使用小写字母和连字符，不要使用空格或特殊字符。
+
+### 文档结构
+
+每个MD文档必须包含以下部分：
+
+```markdown
+---
+title: 课程名称
+category: required|elective
+hasLab: true|false
+credit: 学分
+semester: 学期
+difficulty: 1-5
+author: Your Name <your.email@example.com>
+lastUpdated: YYYY-MM-DD
+---
+
+# 课程名称
+
+## 课程概述
+（简要介绍课程内容和学习目标）
+
+## 重点内容
+（列出课程的主要知识点）
+
+## 代码示例
+（提供完整的代码示例，使用 ```c 等代码块）
+
+## 学习资源
+（推荐教材、课程、工具等）
+
+## 学习技巧
+（学习建议和方法）
+
+## 考试攻略
+（考试重点、答题技巧等）
+
+## 常见问题
+（FAQ格式）
+
+## 贡献者
+（列出贡献者）
+
+## 许可证
+（使用CC BY-NC-SA 4.0）
 ```
 
-2. 直接用浏览器打开 `index.html` 文件
+### Front Matter 说明
 
-或者使用本地服务器：
-```bash
-# 使用 Python 3
-python -m http.server 8002
-
-# 使用 Node.js (需要先安装 http-server)
-npx http-server
-```
-
-3. 在浏览器中访问 `http://localhost:8002`
-
-## 添加课程内容
-
-### 方法一：直接编辑 HTML
-
-在 `index.html` 中找到课程攻略部分（`#courses`），复制已有的课程卡片模板，修改内容：
-
-```html
-<div class="course-card" data-category="required lab">
-    <div class="course-header">
-        <h3 class="course-name">课程名称</h3>
-        <span class="course-tag required">必修</span> <!-- 或 elective -->
-    </div>
-    <div class="course-meta">
-        <span class="course-credit">学分: 4</span>
-        <span class="course-semester">大一上</span>
-    </div>
-    <!-- ... 其他内容 -->
-</div>
-```
-
-注意 `data-category` 属性：
-- `required` - 必修课
-- `elective` - 选修课
-- `lab` - 有上机实验
-
-### 方法二：使用 JSON 数据
-
-1. 编辑 `assets/data/courses-template.json`
-2. 添加课程信息
-3. 后续可以通过 JavaScript 动态加载（需要修改 `main.js`）
-
-### 添加代码示例
-
-在课程卡片中添加代码示例：
-
-```html
-<div class="course-examples">
-    <h4>代码示例</h4>
-    <button class="toggle-code">展开代码</button>
-    <div class="code-container hidden">
-        <pre><code class="language-python">你的代码</code></pre>
-    </div>
-</div>
-```
-
-支持的语言：
-- `c` - C语言
-- `cpp` - C++
-- `python` - Python
-- `java` - Java
-- `javascript` - JavaScript
-- `sql` - SQL
-- 等等...
-
-## 部署到 GitHub Pages
-
-### 方法一：直接部署主分支
-
-1. 将代码推送到 GitHub 仓库
-
-```bash
-git add .
-git commit -m "初始提交"
-git branch -M main
-git remote add origin https://github.com/your-username/software-engineering-guide.git
-git push -u origin main
-```
-
-2. 在 GitHub 仓库页面：
-   - 进入 Settings → Pages
-   - Source 选择：Deploy from a branch
-   - Branch 选择：main / root
-   - 点击 Save
-
-3. 等待几分钟后，访问 `https://your-username.github.io/software-engineering-guide/`
-
-### 方法二：使用 gh-pages 分支
-
-```bash
-# 安装 gh-pages 包
-npm install -g gh-pages
-
-# 构建并部署
-gh-pages -d .
-```
-
-### 方法三：使用 GitHub Actions
-
-创建 `.github/workflows/deploy.yml`：
+每个MD文档的开头必须包含YAML格式的元数据：
 
 ```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+---
+title: C语言程序设计           # 课程名称
+category: required            # required(必修) 或 elective(选修)
+hasLab: true                 # 是否有实验课
+credit: 4                    # 学分
+semester: 大一上              # 学期
+difficulty: 3                # 难度等级 1-5
+author: Your Name            # 作者
+lastUpdated: 2024-01-05      # 最后更新日期
+---
 ```
 
-## 自定义配置
+### 代码块规范
 
-### 修改主题颜色
+使用正确的语言标识符：
 
-编辑 `assets/css/style.css` 中的 CSS 变量：
-
-```css
-:root {
-    --primary-color: #2563eb;      /* 主色调 */
-    --secondary-color: #7c3aed;    /* 辅助色 */
-    --success-color: #10b981;      /* 成功色 */
-    /* ... 其他颜色 */
+````markdown
+```c
+// C语言代码
+#include <stdio.h>
+int main() {
+    return 0;
 }
 ```
 
-### 修改网站信息
-
-在 `index.html` 中修改：
-- `<title>` 标签 - 网页标题
-- `.hero-title` - 主标题
-- `.hero-subtitle` - 副标题
-- `.hero-stats` - 统计数据
-
-## 项目结构
-
-```
-software-engineering-guide/
-├── index.html                 # 主页面
-├── assets/
-│   ├── css/
-│   │   └── style.css         # 样式文件
-│   ├── js/
-│   │   └── main.js           # JavaScript 交互
-│   ├── data/
-│   │   └── courses-template.json  # 课程数据模板
-│   └── images/               # 图片资源
-└── README.md                 # 说明文档
+```python
+# Python代码
+print("Hello, World!")
 ```
 
-## 技术栈
+```sql
+-- SQL语句
+SELECT * FROM users;
+```
+````
 
-- **HTML5** - 页面结构
-- **CSS3** - 样式设计（Grid + Flexbox 布局）
-- **JavaScript (ES6+)** - 交互功能
-- **highlight.js** - 代码高亮
+支持的语言标识符：`c`, `cpp`, `python`, `java`, `javascript`, `sql`, `html`, `css`, `bash`, `go`, `rust` 等。
 
-## 功能说明
+### 格式规范
 
-### 导航栏
-- 固定在顶部，滚动时有阴影效果
-- 移动端自动折叠为汉堡菜单
-- 滚动时自动高亮当前区域
+1. **标题层级**
+   - 一级标题 `#` 只用于文档标题
+   - 二级标题 `##` 用于主要章节
+   - 三级标题 `###` 用于子章节
 
-### 时间线
-- 响应式设计，大屏幕左右交替，小屏幕单侧显示
-- 每个学期列出关键任务
+2. **列表**
+   - 使用 `-` 或 `*` 作为无序列表标记
+   - 列表项之间空一行
+   - 嵌套列表使用2个空格缩进
 
-### 课程筛选
-- 点击按钮快速筛选课程
-- 支持：全部 / 必修 / 选修 / 有实验
+3. **强调**
+   - 粗体：`**文字**`
+   - 斜体：`*文字*`
+   - 代码：`` `代码` ``（反引号）
 
-### 代码高亮
-- 使用 highlight.js 自动识别语言
-- 点击按钮展开/折叠代码
-- 深色主题，易于阅读
+4. **链接**
+   - 外部链接：`[文字](URL)`
+   - 图片：`![描述](图片URL)`
 
-### 回到顶部
-- 滚动超过 300px 后显示
-- 点击平滑滚动到顶部
+5. **表格**
+   ```markdown
+   | 列1 | 列2 | 列3 |
+   |-----|-----|-----|
+   | 内容1 | 内容2 | 内容3 |
+   ```
 
-## 常见问题
+## 🚀 提交流程
 
-**Q: 如何修改统计数字？**
-A: 编辑 `index.html` 中的 `.hero-stats` 部分。
+### 1. Fork仓库
 
-**Q: 如何添加新的课程？**
-A: 复制现有的 `.course-card` 结构，修改内容即可。
+点击GitHub页面右上角的"Fork"按钮
 
-**Q: 如何禁用某个功能？**
-A: 在 `assets/js/main.js` 中注释掉对应的初始化函数调用。
+### 2. 克隆到本地
 
-**Q: 页面加载慢怎么办？**
-A: 考虑压缩图片、使用 CDN、或者使用静态站点生成器。
+```bash
+git clone https://github.com/YOUR_USERNAME/software-engineering-guide.git
+cd software-engineering-guide
+```
 
-## 贡献指南
+### 3. 创建分支
 
-欢迎提交问题和 Pull Request！
+```bash
+git checkout -b add-course-name
+```
 
-1. Fork 本项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
+### 4. 创建MD文档
 
-## 待办事项
+在 `courses/md/` 目录下创建新的MD文件，按照上面的规范编写内容。
 
-- [ ] 添加搜索功能
-- [ ] 支持暗黑模式
-- [ ] 添加课程评价功能
-- [ ] 添加学习进度追踪
-- [ ] 支持导出 PDF
-- [ ] 添加评论系统
+### 5. 测试预览（可选）
 
-## 许可证
+使用VS Code的Markdown预览功能，或其他Markdown编辑器查看效果。
 
-本项目采用 MIT 许可证 - 详见 LICENSE 文件
+### 6. 提交更改
 
-## 致谢
+```bash
+git add courses/md/your-course.md
+git commit -m "添加《课程名称》攻略"
+git push origin add-course-name
+```
 
-感谢所有为本项目做出贡献的同学！
+### 7. 创建Pull Request
+
+1. 访问你Fork的仓库页面
+2. 点击"Pull requests" → "New pull request"
+3. 填写PR标题和描述
+4. 等待审核
+
+## ✅ PR检查清单
+
+提交PR前请确认：
+
+- [ ] MD文档格式正确，包含必要的Front Matter
+- [ ] 代码示例使用了正确的语言标识符
+- [ ] 没有语法错误和错别字
+- [ ] 内容原创或注明了来源
+- [ ] 分支名称清晰（如 `add-data-structure`）
+- [ ] PR描述说明了改动内容
+
+## 📖 内容要求
+
+### 原创性
+
+- 鼓励原创内容
+- 如果引用他人内容，请注明来源
+- 不要直接复制粘贴受版权保护的内容
+
+### 质量
+
+- 内容准确，经得起验证
+- 代码示例可以运行
+- 解释清晰易懂
+- 格式规范统一
+
+### 实用性
+
+- 对学生有实际帮助
+- 包含实战经验
+- 不是空洞的理论
+- 可操作性强
+
+## 🎨 风格指南
+
+### 语气
+
+- 友好、鼓励
+- 不说教
+- 使用第二人称"你"
+- 适当使用emoji增强可读性
+
+### 结构
+
+- 从简单到复杂
+- 从理论到实践
+- 重点内容加粗
+- 使用列表和表格整理信息
+
+### 代码示例
+
+- 完整可运行
+- 添加充分注释
+- 包含多个例子（简单→复杂）
+- 说明运行环境和依赖
+
+## 🤝 代码审核
+
+所有提交都会经过审核，我们会：
+
+1. 检查格式和规范
+2. 验证内容准确性
+3. 测试代码示例
+4. 提出修改建议（如有需要）
+
+审核通过后会合并到主分支。
+
+## 📧 联系方式
+
+如有疑问，欢迎：
+
+- 提交Issue
+- 发送邮件：your-email@example.com
+- 加入讨论组
+
+## 🌟 贡献者
+
+感谢所有贡献者！
+
+## 📄 许可证
+
+提交的内容默认采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可证。
 
 ---
 
-**用 ❤️ 制作，帮助每一位软件工程专业学生**
-
-如有问题或建议，欢迎联系：your-email@example.com
+**再次感谢你的贡献！让我们一起帮助更多的学弟学妹！** 🎓

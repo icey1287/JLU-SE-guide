@@ -244,42 +244,28 @@
 
             <!-- 课程列表 -->
             <div class="course-grid" id="courseGrid">
-                <!-- 课程卡片模板，后续通过JavaScript动态加载 -->
-                <a href="courses/c-language.html" class="course-card-link">
+                <!-- 课程卡片模板，后续可通过MD文档自动生成 -->
+                <a href="courses/course.html?course=c-language" class="course-card-link">
                     <div class="course-card" data-category="required lab">
                         <div class="course-header">
                             <h3 class="course-name">C语言程序设计</h3>
                             <span class="course-tag required">必修</span>
+                            <span class="course-tag lab">有实验</span>
                         </div>
                         <div class="course-meta">
                             <span class="course-credit">学分: 4</span>
                             <span class="course-semester">大一上</span>
                         </div>
                         <div class="course-description">
-                            <p>编程入门课程，学习C语言基础语法、指针、结构体等核心概念。</p>
+                            <p>编程入门课程，学习C语言基础语法、指针、结构体等核心概念。通过大量实践培养编程思维和调试能力。</p>
                         </div>
-                        <div class="course-topics">
-                            <h4>重点内容</h4>
-                            <ul>
-                                <li>变量、数据类型和运算符</li>
-                                <li>控制流程（if/else, switch, 循环）</li>
-                                <li>数组和字符串</li>
-                                <li>指针和内存管理</li>
-                                <li>结构体和文件操作</li>
-                            </ul>
+                        <div class="course-status available">
+                            <span class="status-icon">✓</span> 详细攻略可用
                         </div>
-                        <div class="course-resources">
-                            <h4>学习资源</h4>
-                            <ul>
-                                <li>《C Primer Plus》- 经典入门教材</li>
-                                <li>《C程序设计语言》（K&R）- 深入理解</li>
-                            </ul>
-                        </div>
-                        <div class="course-click-hint">点击查看详细攻略 →</div>
                     </div>
                 </a>
 
-                <div class="course-card" data-category="required lab">
+                <a href="courses/course.html?course=data-structure" class="course-card-link">
                     <div class="course-header">
                         <h3 class="course-name">数据结构与算法</h3>
                         <span class="course-tag required">必修</span>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程攻略 - 软件工程专业通关指南</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/detail.css">
+    <link rel="stylesheet" href="../assets/css/course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body class="detail-page">
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <h1>软件工程通关指南</h1>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#home" class="nav-link">首页</a></li>
+                <li><a href="../index.html#timeline" class="nav-link">时间线</a></li>
+                <li><a href="../index.html#courses" class="nav-link">课程攻略</a></li>
+                <li><a href="../index.html#advice" class="nav-link">学习建议</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 加载指示器 -->
+    <div id="loadingIndicator" class="loading-indicator">
+        <div class="spinner"></div>
+        <p>正在加载课程内容...</p>
+    </div>
+
+    <!-- 错误提示 -->
+    <div id="errorMessage" class="error-message hidden">
+        <h2>😕 加载失败</h2>
+        <p id="errorText"></p>
+        <a href="../index.html#courses" class="back-button">← 返回课程列表</a>
+    </div>
+
+    <!-- 页面主体 -->
+    <div id="mainContent" class="detail-container hidden">
+        <!-- 面包屑导航 -->
+        <div class="breadcrumb-container">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="../index.html">首页</a>
+                    <span class="separator">/</span>
+                    <a href="../index.html#courses">课程攻略</a>
+                    <span class="separator">/</span>
+                    <span class="current" id="courseTitle">加载中...</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <main class="detail-main">
+            <!-- 课程头部（从MD的Front Matter生成） -->
+            <header class="course-header-detail" id="courseHeader">
+                <div class="course-tags" id="courseTags"></div>
+                <h1 class="course-title" id="courseTitleMain">加载中...</h1>
+
+                <!-- 课程元信息 -->
+                <div class="course-meta-bar">
+                    <div class="meta-item">
+                        <span class="meta-icon">📚</span>
+                        <span class="meta-label">学分</span>
+                        <span class="meta-value" id="courseCredit">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📅</span>
+                        <span class="meta-label">学期</span>
+                        <span class="meta-value" id="courseSemester">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">⏱️</span>
+                        <span class="meta-label">阅读时间</span>
+                        <span class="meta-value" id="readTime">计算中...</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📝</span>
+                        <span class="meta-label">字数</span>
+                        <span class="meta-value" id="wordCount">计算中...</span>
+                    </div>
+                </div>
+
+                <!-- 难度评级 -->
+                <div class="difficulty-rating" id="difficultyRating">
+                    <span class="difficulty-label">课程难度：</span>
+                    <div class="difficulty-stars" id="difficultyStars"></div>
+                    <span class="difficulty-text" id="difficultyText">-</span>
+                </div>
+
+                <!-- 作者信息 -->
+                <div class="author-info" id="authorInfo" style="display: none;">
+                    <span class="meta-icon">✍️</span>
+                    <span>作者：<span id="authorName">-</span></span>
+                    <span class="last-updated">最后更新：<span id="lastUpdated">-</span></span>
+                </div>
+            </header>
+
+            <!-- MD内容渲染区 -->
+            <div id="mdContent" class="md-content">
+                <!-- MD内容将被渲染到这里 -->
+            </div>
+
+            <!-- 页面底部导航 -->
+            <div class="page-navigation">
+                <a href="../index.html#courses" class="nav-button back">
+                    <span class="nav-label">返回</span>
+                    <span class="nav-title">课程列表 ←</span>
+                </a>
+            </div>
+        </main>
+
+        <!-- 侧边栏 -->
+        <aside class="detail-sidebar">
+            <!-- 目录导航 -->
+            <div class="sidebar-widget">
+                <h3>📖 本文目录</h3>
+                <ul class="toc-list" id="tocList">
+                    <!-- TOC将自动生成 -->
+                </ul>
+            </div>
+
+            <!-- 快速链接 -->
+            <div class="sidebar-widget">
+                <h3>🔗 快速链接</h3>
+                <ul class="quick-links">
+                    <li><a href="../index.html#timeline">📅 查看时间线</a></li>
+                    <li><a href="../index.html#pitfalls">⚠️ 避坑指南</a></li>
+                    <li><a href="../index.html#advice">💡 学习建议</a></li>
+                    <li><a href="../CONTRIBUTING.md">✍️ 贡献内容</a></li>
+                </ul>
+            </div>
+
+            <!-- 返回按钮 -->
+            <div class="sidebar-widget">
+                <a href="../index.html#courses" class="back-button">← 返回课程列表</a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 软件工程通关指南. 用❤️制作</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <!-- Marked.js - MD解析库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Highlight.js - 代码高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- 主JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/course-loader.js"></script>
+</body>
+</html>
